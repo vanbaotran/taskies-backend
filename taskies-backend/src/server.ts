@@ -25,7 +25,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // Define your API routes and route handlers below
-// For example:
+// For example:git remote add origin git@github.com:vanbaotran/taskies-backend.git
 app.get("/tasks", (req: Request, res: Response, next: NextFunction) => {
   // Handle get tasks logic
   const tasks = fetchTasksFromDatabase();
@@ -51,6 +51,7 @@ app.delete("/task/:id", (req: Request, res: Response, next: NextFunction) => {
   deleteTaskFromDatabase(taskId);
   res.json({ message: "Task deleted successfully" });
 });
+
 // Start the server
 const PORT = 3001;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
